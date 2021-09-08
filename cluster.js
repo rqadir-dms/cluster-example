@@ -13,6 +13,7 @@ const port = 9800
 const cores = os.cpus().length
 
 // To enable clustering effect
+
  if (cluster.isMaster) {
      console.log(`Master Process ID: ${process.pid}`)
      for (let i = 0; i < cores; i++) cluster.fork()
@@ -30,8 +31,8 @@ const cores = os.cpus().length
      })
 }
 
-// To disable clustering effect
 
+// To disable clustering effect
 /*
 http.createServer( (req, res) => {
     let message = `Replied back from process with PID: ${process.pid}`
@@ -41,7 +42,7 @@ http.createServer( (req, res) => {
 }).listen(port, () => {
     console.log('Listening on port:', port)
 })
-
 */
+
 
 
